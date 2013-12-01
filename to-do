@@ -2,3 +2,4 @@ Make room identifiers case insensitive
 A class for events
 Rooms should include event objects and execute function should check thsi object after entering a particular room
 Figure out how to fight a character
+'objects' json file should contain settings and other global variables like initial room name of the game, user defined items etc.
