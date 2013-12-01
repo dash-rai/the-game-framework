@@ -1,5 +1,16 @@
-Make room identifiers case insensitive
-A class for events
-Rooms should include event objects and execute function should check thsi object after entering a particular room
-Figure out how to fight a character
-'objects' json file should contain settings and other global variables like initial room name of the game, user defined items etc.
+Have verbose and minimal description strings and give out verbose strings only the first time a room is @visited, also have an option for the player to change modes.
+Make room identifiers case insensitive.
+A class for events(for basic functionality of an event)
+Rooms should include event objects and execute function should check this object after entering a particular room and also before moving to some other room, like a warning that you might get killed if you enter a particularly dark dungeon.
+Provide a neat interface for a user to describe an event in modules and the modules can be mixed in with the particular event object at runtime with object.extend(module)
+The lexer and execute needs to get more dynamic, the lexer needs to look at language constructs and give out token, value pairs and execute should
+dynamically look for methods with the token.
+Classes for a reasonable number of common items one would want while creating a text based adventure game.
+Items should have an adjective variable which could be used to differentiate two different objects of the same kind, execute needs to be also aware of this and do something similar to asking 'throw object at what?'
+The common item classes might also include methods to associate with one another, like tying a rope to a table.
+Figure out how to fight a character.
+Functionality for creating new kinds of items away from the core of the framework.
+A json file containing settings and other global variables like initial room, name of the game, user defined items etc..
+A scoring system which can be controlled from json, or with the event objects.
+A save and restore mechanism using binary data serialization.
+Come up with a map making ruby script to gather (atleast) the names, descriptions and paths (the basic stuff) with tab-complete and the likes(whatever makes it easy) and spit out json.
