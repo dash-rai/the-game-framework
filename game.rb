@@ -5,9 +5,9 @@ require_relative 'classes'
 require_relative 'lexer'
 require_relative 'execute'
 
-objects_json = File.open(File.expand_path('~/the-game-framework/JSON/objects'),'r')
+objects_json = File.open(File.expand_path('JSON/objects'),'r')
 objects_data = JSON.parse(objects_json.read.gsub!("\n","") , :symbolize_names => true)
-rooms_json = File.open(File.expand_path('~/the-game-framework/JSON/rooms'),'r')
+rooms_json = File.open(File.expand_path('JSON/rooms'),'r')
 rooms_data = JSON.parse(rooms_json.read.gsub!("\n","").gsub!("\t","") , :symbolize_names => true)
 objects_json.close
 rooms_json.close
