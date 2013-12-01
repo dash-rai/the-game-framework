@@ -5,9 +5,9 @@
 			How about that, nowhere to go but into the house! Oh wait, there are also 
 			clearings to the north-east and north-west. There's a piece of paper lying on the ground.", 
 
-			"paths" : {"n" : "living_room",
-			    "ne": "west_of_house",
-			    "nw": "east_of_house"
+			"paths" : {"N" : "living_room",
+			    "NE": "east_of_house",
+			    "NW": "west_of_house"
 			    }
 		 },
 
@@ -17,9 +17,9 @@
 			There are clearings to the south-east and north-east.", 
 
 			"paths" : {
-				"ne" : "north_of_house",
-				"se" : "south_of_house",
-				"e"  : "The window is too small for you to go through"
+				"NE" : "north_of_house",
+				"SE" : "south_of_house",
+				"E"  : "The window is too small for you to go through"
 			    }
 		   },
 		   
@@ -29,12 +29,12 @@
 			in every other direction. There are a few stones on the ground.",
 
 			 "paths" : {
-			     "s" : "There's no door to go into the house",
-			     "se" : "east_of_house",
-			     "sw" : "west_of_house",
-			     "n"  : "You can't swim!",
-			     "e"  : "You can't swim!",
-			     "w"  : "You can't swim!"
+			     "S" : "There's no door to go into the house",
+			     "SE" : "east_of_house",
+			     "SW" : "west_of_house",
+			     "N"  : "You can't swim!",
+			     "E"  : "You can't swim!",
+			     "W"  : "You can't swim!"
 			     }
 
 		     },
@@ -46,10 +46,10 @@
 			other directions.",
 
 			"paths" :{
-				"n" : "You can't swim!",
-				"w" : "There's no door to get into the house",
-				"se": "south_of_house",
-				"ne": "north_of_house"
+				"N" : "You can't swim!",
+				"W" : "There's no door to get into the house",
+				"SW": "south_of_house",
+				"NW": "north_of_house"
 				}
 
 		},
@@ -59,9 +59,10 @@
 			There are stairways leading both up and down. There's a kitchen to the north-east.",
 
 			"paths" :{
-				"d" : "basement",
-				"u" : "Hallway",
-				"ne": "Kitchen"
+				"D" : "basement",
+				"U" : "hallway",
+				"NE": "kitchen",
+				"S" : "south_of_house"
 				}
 		},
 
@@ -69,7 +70,7 @@
 			"description" : "There's a table here on which there's a key, nowhere to go but up.",
 
 			"paths" :{
-				"u" : "living_room"
+				"U" : "living_room"
 				}
 
 		},
@@ -78,7 +79,7 @@
 			"description" : "There's a lantern hanging here. There's a living room to the south-west.",
 
 			"paths" :{
-				"sw" : "living_room"
+				"SW" : "living_room"
 				}
 
 		},
@@ -88,10 +89,10 @@
 			seems to be locked to the west.",
 
 			"paths" : {
-				  "n" : "The window is too small for you to go through again. I wonder why? Maybe
+				  "N" : "The window is too small for you to go through again. I wonder why? Maybe
 				  this game lacks proper features.",
-				  "w" : "The door is locked",
-				  "d" : "living_room"
+				  "W" : "The door is locked",
+				  "D" : "living_room"
 				  }
 		},
 
@@ -101,7 +102,7 @@
 			to burn your way through the dense vegetation.",
 
 			"paths" : {
-				  "e" : "hallway"
+				  "E" : "hallway"
 				  }
 
 	}

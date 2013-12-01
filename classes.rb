@@ -70,28 +70,29 @@ end
 
 
 class Room
-  attr_accessor :item
+  attr_accessor :item,:paths,:description
   def initialize(description,paths)
-    @desciption=description
+    @description=description
     @paths=paths
   end
 
   def self.from_hash(hash)
-    new(hash["description"],hash["paths"])
+    new(hash[:description],hash[:paths])
   end
 
   def move(direction)
-    if $current_room.@paths.key?(direction) #Direction has been defined
-      if $rooms.key?($current_room.@paths[direction]) #It's a valid room
-        $current_room=$rooms[$current_room.@paths[direction]]
+    destination = $current_room.paths[direction] #A string from the json 
+    if destination != nil #direction has been defined
+      if $rooms.key? destination.to_sym #The string is a valid room
+        $current_room=$rooms[destination.to_sym]
+        print $current_room.description
       else
-        print $current_room.paths[direction]#Reason why you can't go there
+        puts destination
       end
     else
-      print "You can't go there."
+      puts "You can't go there."
     end
-  end
-
     
+  end
 end
 
