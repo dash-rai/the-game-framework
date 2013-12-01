@@ -1,0 +1,13 @@
+{
+"rooms": [
+"south_of_house",
+"north_of_house",
+"east_of_house",
+"west_of_house",
+"living_room",
+"basement",
+"kitchen",
+"hallway",
+"bedroom"
+]
+}
