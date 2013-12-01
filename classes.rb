@@ -80,5 +80,18 @@ class Room
     new(hash["description"],hash["paths"])
   end
 
+  def move(direction)
+    if $current_room.@paths.key?(direction) #Direction has been defined
+      if $rooms.key?($current_room.@paths[direction]) #It's a valid room
+        $current_room=$rooms[$current_room.@paths[direction]]
+      else
+        print $current_room.paths[direction]#Reason why you can't go there
+      end
+    else
+      print "You can't go there."
+    end
+  end
+
+    
 end
 

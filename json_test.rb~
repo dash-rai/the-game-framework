@@ -1,6 +1,0 @@
-require 'rubygems'
-require 'json'
-
-json=File.open(File.expand_path('~/the-game-framework/JSON/objects'),'r')
-parsed= JSON.parse(File.read(json))
-print parsed['rooms'][0]
