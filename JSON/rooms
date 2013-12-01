@@ -3,7 +3,7 @@
 			"description" : "There is dense vegetation blocking your path to the south, 
 			east and west.There is a grim looking house with it's door wide open. 
 			How about that, nowhere to go but into the house! Oh wait, there are also 
-			clearings to the north-east and north-west", 
+			clearings to the north-east and north-west. There's a piece of paper lying on the ground.", 
 
 			"paths" : {"n" : "living_room",
 			    "ne": "west_of_house",
@@ -19,14 +19,14 @@
 			"paths" : {
 				"ne" : "north_of_house",
 				"se" : "south_of_house",
-				"e"  : "You can't fit through the window"
+				"e"  : "The window is too small for you to go through"
 			    }
 		   },
 		   
 "north_of_house" : {
 			"description" : "There's a house to the south, but the door seems to be on the 
 			other side. There are clearings to the south-east and south-west. There's water 
-			in every other direction.",
+			in every other direction. There are a few stones on the ground.",
 
 			 "paths" : {
 			     "s" : "There's no door to go into the house",
@@ -52,5 +52,58 @@
 				"ne": "north_of_house"
 				}
 
-		}
+		},
+
+"living_room" : {
+			"description" : "The room is dimly lit, there's a lot of old dusty furniture here.
+			There are stairways leading both up and down. There's a kitchen to the north-east.",
+
+			"paths" :{
+				"d" : "basement",
+				"u" : "Hallway",
+				"ne": "Kitchen"
+				}
+		},
+
+"basement" : {
+			"description" : "There's a table here on which there's a key, nowhere to go but up.",
+
+			"paths" :{
+				"u" : "living_room"
+				}
+
+		},
+
+"kitchen" : {
+			"description" : "There's a lantern hanging here. There's a living room to the south-west.",
+
+			"paths" :{
+				"sw" : "living_room"
+				}
+
+		},
+
+"hallway" : {
+			"description" : "There's a window towards the north, a stairway going down and a door that
+			seems to be locked to the west.",
+
+			"paths" : {
+				  "n" : "The window is too small for you to go through again. I wonder why? Maybe
+				  this game lacks proper features.",
+				  "w" : "The door is locked",
+				  "d" : "living_room"
+				  }
+		},
+
+"bedroom" : {
+			"description" : "There's a bed here, on which there seems to be a butt-load of cash
+			shabbily covered with a blanket. Maybe you could use it as tinder to make a fire
+			to burn your way through the dense vegetation.",
+
+			"paths" : {
+				  "e" : "hallway"
+				  }
+
+	}
+
 }
